@@ -20,6 +20,10 @@ Enjoy at http://your.ip:5000
 
 You need to login to start posting data. 
 
+## Demo
+
+You can watch it in production at http://fatrack.khrogosphe.re/
+
 ## deploy with web server
 
 exemple of nginx host : 
