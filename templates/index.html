@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block body %}
+  {% if session.logged_in %}
+    <form action="{{ url_for('add_entry') }}" method=post class=add-entry>
+      <dl>
+        <dt>date (YYYY-MM-DD):
+        <dd><input type=datetime size=20 name=ts_date value="{{ today }}">
+        <dt>weight:
+        <dd><input type=text name=weight>
+        <dd><input type=submit value=Button>
+      </dl>
+    </form>
+  {% endif %}
+  <ul class=entries>
+  {% if entries %}
+    {% autoescape false %}
+    {{ entries}}
+    {% endautoescape %}
+  {% else %}
+    <em>Unbelievable.  No entries here so far</em>
+  {% endif %}
+  </ul>
+{% endblock %}
