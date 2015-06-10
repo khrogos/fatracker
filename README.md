@@ -7,6 +7,7 @@ Small app based on Flaskr to track your weight
 	git clone https://github.com/khrogos/fatracker
 	cd fatracker
 	pip install -r requirements.txt
+	sqlite3 fatracker.db < schema.sql
 	cp settings.sample.cfg settings.py
 
 personnalized settings.py with your informations
