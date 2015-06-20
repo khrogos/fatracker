@@ -40,7 +40,7 @@ def gen_chart():
 
     chart = pygal.Line(disable_xml_declaration=True)
     chart.title = "Weight evolution"
-    dates = [unicode(entry['date']).split(" ")[0] for entry in entries ]
+    dates = ["-".join(unicode(entry['date']).split(" ")[0].split("-")[1:]) for entry in entries ]
     chart.x_labels = (map(str, dates))
     chart.add('Weight', [ entry['weight'] for entry in entries ])
     chart.add('goal', goal_data)
